@@ -40,10 +40,6 @@ const Navigation = ({ theme, toggleTheme }) => {
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <div className="nav-logo">
-          <span className="gradient-text">RC</span>
-        </div>
-
         <ul className="nav-links">
           {['home', 'about', 'experience', 'projects', 'contact'].map((section) => (
             <li key={section}>
