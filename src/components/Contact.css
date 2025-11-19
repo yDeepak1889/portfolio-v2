@@ -1,0 +1,61 @@
+.contact {
+    background: var(--color-bg-primary);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-text-secondary);
+}
+
+.contact-info {
+    margin: var(--spacing-2xl) 0;
+}
+
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-accent-primary);
+    transition: all var(--transition-normal);
+    text-decoration: none;
+}
+
+.email-link:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    background: var(--color-bg-tertiary);
+}
+
+.email-link svg {
+    color: var(--color-accent-secondary);
+}
+
+.contact-cta {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .email-link {
+        font-size: 1.1rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+}

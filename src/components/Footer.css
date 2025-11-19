@@ -1,0 +1,17 @@
+.footer {
+    background: var(--color-bg-secondary);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    border-top: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.footer-text {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
