@@ -68,12 +68,6 @@ const Hero = () => {
                     <button className="btn btn-primary" onClick={scrollToContact}>
                         Get In Touch
                     </button>
-                    <a
-                        href="mailto:richauxw@gmail.com"
-                        className="btn btn-secondary"
-                    >
-                        Email Me
-                    </a>
                 </div>
             </div>
         </section>
