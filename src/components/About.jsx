@@ -11,34 +11,28 @@ const About = () => {
                 <div className="about-content">
                     <div className="about-text">
                         <p>
-                            I'm a <strong>Senior UX Writer</strong> with over 4 years of experience,
-                            currently working at <strong>ALLEN Digital</strong> in Bengaluru. My journey
-                            in UX writing is driven by a deep passion for understanding people and
-                            crafting messages that truly resonate with them.
+                            I'm a <strong>Senior Content Designer</strong> at <strong>SAP Labs</strong> with <strong>6+ years of experience</strong> designing user-centered content for complex digital products.
                         </p>
 
                         <p>
-                            I specialize in creating <strong>inclusive, simple designs</strong> and have
-                            a particular love for building content and tone of voice guidelines that make
-                            collaboration easier for teams. My approach is always user-focused, ensuring
-                            that every word serves a purpose and creates meaningful connections.
+                            At SAP, I'm redefining <strong>content design systems</strong> and rewriting <strong>content guidelines</strong> across multiple products and features to create more consistent, scalable user experiences. I've also contributed to conversational design guidelines for <strong>Joule AI</strong>, helping shape the voice and interaction patterns for AI-powered experiences.
                         </p>
 
                         <p>
-                            Throughout my career, I've had the privilege of designing <strong>10+ new
-                                features</strong> from the ground up, handling everything from naming conventions
-                            that align with user perspectives to crafting complete user journeys. I thrive
-                            on <strong>0-1 design challenges</strong> where I can shape experiences from
-                            their inception.
+                            I enjoy designing <strong>end-to-end product experiences</strong> and building <strong>0–1 products</strong>, collaborating with cross-functional teams to bring user-centered ideas to life.
+                        </p>
+
+                        <p>
+                            Currently, I'm building my expertise in <strong>Context Engineering</strong>, exploring how content, structured context, and AI systems come together to create more intelligent, user-centered experiences. If you're working in this space or would like to chat about Context Engineering, I'd love to connect and exchange ideas.
                         </p>
 
                         <div className="about-highlights">
                             <div className="highlight-item">
-                                <h3>4+</h3>
+                                <h3>6+</h3>
                                 <p>Years of Experience</p>
                             </div>
                             <div className="highlight-item">
-                                <h3>10+</h3>
+                                <h3>15+</h3>
                                 <p>Features Designed</p>
                             </div>
                             <div className="highlight-item">

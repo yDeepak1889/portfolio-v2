@@ -52,7 +52,7 @@ const Hero = () => {
                 </h2>
 
                 <p className="hero-description">
-                    Working as a <strong>Senior UX Writer (4+ YOE)</strong> at ALLEN Digital in Bengaluru.
+                    Working as a <strong>Senior Content Designer </strong> at SAP Labs in Bengaluru.
                     I have a passion for understanding people and crafting messages that resonate.
                     I love talking about inclusive, simple design and enjoy building content and tone
                     of voice guidelines to make things easier for teams.
@@ -60,21 +60,13 @@ const Hero = () => {
 
                 <p className="hero-description">
                     My goal is to create meaningful connections through clear, user-focused content.
-                    I've designed more than 10+ new features, from naming them with respect to user
+                    I've designed more than 15+ new features, from naming them with respect to user
                     perspective to the end journey. I love building 0-1 design journeys.
                 </p>
 
                 <div className="hero-cta">
                     <a
-                        href="https://www.xplainerr.com/courses/ux-writing"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary"
-                    >
-                        Read my eBook
-                    </a>
-                    <a
-                        href="https://richachaturvedi.com/resume.pdf"
+                        href="https://drive.google.com/file/d/199LRFkWY4J9XqNrGREDN8jXGwIatEJoK/view?usp=drive_link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-secondary"

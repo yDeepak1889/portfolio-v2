@@ -96,6 +96,12 @@
     flex-wrap: wrap;
 }
 
+.hero-cta .btn-secondary:hover {
+    background: transparent;
+    color: var(--color-text-primary);
+    border-color: var(--color-accent-primary);
+}
+
 .hero-social {
     display: flex;
     gap: var(--spacing-md);
