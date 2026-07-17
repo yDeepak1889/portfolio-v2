@@ -2,18 +2,23 @@ import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
 import './Navigation.css';
 
+const sections = [
+  { id: 'projects', label: 'Case Studies' },
+  { id: 'experience', label: 'Experience' }
+];
+
 const Navigation = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Update active section based on scroll position
-      const sections = ['home', 'about', 'experience', 'projects', 'contact'];
-      const current = sections.find(section => {
-        const element = document.getElementById(section);
+      const sectionIds = ['home', ...sections.map(({ id }) => id)];
+      const current = sectionIds.find(sectionId => {
+        const element = document.getElementById(sectionId);
         if (element) {
           const rect = element.getBoundingClientRect();
           return rect.top <= 100 && rect.bottom >= 100;
@@ -27,35 +32,107 @@ const Navigation = ({ theme, toggleTheme }) => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  useEffect(() => {
+    if (!isMenuOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
-    <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
+    <>
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`} aria-label="Primary navigation">
       <div className="container nav-container">
-        <ul className="nav-links">
-          {['home', 'about', 'experience', 'projects', 'contact'].map((section) => (
-            <li key={section}>
-              <button
-                onClick={() => scrollToSection(section)}
-                className={activeSection === section ? 'active' : ''}
+        <a href="#home" className="nav-logo" aria-label="Richa Chaturvedi, home" onClick={closeMenu}>
+          RC<span>.</span>
+        </a>
+
+        <ul id="primary-menu" className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+          {sections.map(({ id, label }) => (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                className={activeSection === id ? 'active' : ''}
+                aria-current={activeSection === id ? 'location' : undefined}
+                onClick={closeMenu}
               >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </button>
+                {label}
+              </a>
             </li>
           ))}
+          <li className="mobile-external">
+            <a
+              href="https://www.linkedin.com/in/richa-chaturvedi-ux/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+          </li>
+          <li className="mobile-external">
+            <a
+              href="https://drive.google.com/file/d/199LRFkWY4J9XqNrGREDN8jXGwIatEJoK/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume ↗
+            </a>
+          </li>
         </ul>
 
-        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+        <div className="nav-actions">
+          <a
+            href="https://www.linkedin.com/in/richa-chaturvedi-ux/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-resume"
+          >
+            LinkedIn ↗
+          </a>
+          <a
+            href="https://drive.google.com/file/d/199LRFkWY4J9XqNrGREDN8jXGwIatEJoK/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-resume"
+          >
+            Resume ↗
+          </a>
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="primary-menu"
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
