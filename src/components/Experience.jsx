@@ -9,6 +9,7 @@ const Experience = () => {
             location: 'Bengaluru, India',
             current: true,
             description: 'Leading enterprise content design, AI initiatives, and scalable content systems across SAP products and teams.',
+            focus: ['AI & Joule', 'Content systems', 'Context Engineering'],
             responsibilities: [
                 'Lead the Content Design team\'s AI initiative by defining processes, content standards, and best practices, while conducting organization-wide training on AI-assisted content design and emerging workflows.',
                 'Contribute to SAP Joule AI by developing conversational design guidelines and shaping AI experiences aligned with SAP\'s content design principles.',
@@ -27,6 +28,7 @@ const Experience = () => {
             period: '2023 - 2025',
             location: 'Bengaluru, India',
             description: 'Led UX writing initiatives for digital education products and created user-focused content that enhanced learning experiences.',
+            focus: ['0–1 products', 'Edtech', 'Design guidelines'],
             responsibilities: [
                 'Designed content for 10+ new features from naming to end-user journey',
                 'Built content and tone of voice guidelines for product teams',
@@ -40,6 +42,7 @@ const Experience = () => {
             period: '2022 - 2023',
             location: 'Bengaluru, India',
             description: 'Crafted user-centric content for fintech products, simplifying complex financial concepts for users.',
+            focus: ['Fintech', 'Product features', 'Voice & tone'],
             responsibilities: [
                 'Designed content for financial products including Uni Cash and P2P Lending',
                 'Created comprehensive writing style guidelines',
@@ -53,6 +56,7 @@ const Experience = () => {
             period: '2021 - 2022',
             location: 'Bengaluru, India',
             description: 'Developed clear, trustworthy content for investment and wealth management platforms.',
+            focus: ['Financial UX', 'Microcopy', 'Feature launches'],
             responsibilities: [
                 'Wrote user-focused microcopy for investment flows',
                 'Simplified complex financial terminology for better user understanding',
@@ -65,6 +69,7 @@ const Experience = () => {
             period: '2020 - 2021',
             location: 'Bengaluru, India',
             description: 'Contributed to UX writing for micro-mobility platform, focusing on user engagement and clarity.',
+            focus: ['Mobility', 'User flows', 'Content audits'],
             responsibilities: [
                 'Created content for app features and user flows',
                 'Assisted in developing content guidelines',
@@ -77,6 +82,7 @@ const Experience = () => {
             period: '2020',
             location: 'India',
             description: 'Supported corporate communications initiatives and internal content development.',
+            focus: ['Communications', 'Brand messaging'],
             responsibilities: [
                 'Assisted in creating internal communications',
                 'Developed content for corporate initiatives',
@@ -88,38 +94,52 @@ const Experience = () => {
     return (
         <section id="experience" className="experience">
             <div className="container">
-                <h2 className="section-title">
-                    Where I've <span className="gradient-text">Worked</span>
-                </h2>
+                <div className="section-heading">
+                    <p className="eyebrow">Experience</p>
+                    <h2>Designing across products, teams, and <span className="accent-text">systems.</span></h2>
+                    <p className="section-intro">
+                        Six years across enterprise software, education, fintech, mobility, and financial products.
+                    </p>
+                </div>
 
-                <div className="experience-timeline">
+                <div className="experience-list">
                     {experiences.map((exp, index) => (
-                        <div
-                            key={index}
+                        <article
+                            key={exp.company}
                             className={`experience-item ${exp.current ? 'current' : ''}`}
                         >
-                            <div className="experience-marker"></div>
-                            <div className="experience-content">
+                            <div className="experience-index">
+                                {String(index + 1).padStart(2, '0')}
+                            </div>
+                            <div className="experience-main">
                                 <div className="experience-header">
                                     <div>
-                                        <h3>{exp.title}</h3>
                                         <p className="company">{exp.company}</p>
-                                        <p className="period">{exp.period} • {exp.location}</p>
+                                        <h3>{exp.title}</h3>
                                     </div>
-                                    {exp.current && <span className="badge">Current Role</span>}
+                                    <div className="experience-date">
+                                        {exp.current && <span className="badge">Current</span>}
+                                        <p>{exp.period}</p>
+                                        <p>{exp.location}</p>
+                                    </div>
                                 </div>
 
                                 <p className="description">{exp.description}</p>
 
-                                {exp.responsibilities && (
+                                <ul className="experience-tags" aria-label={`${exp.company} focus areas`}>
+                                    {exp.focus.map((item) => <li key={item}>{item}</li>)}
+                                </ul>
+
+                                <details>
+                                    <summary>View role highlights</summary>
                                     <ul className="responsibilities">
-                                        {exp.responsibilities.map((resp, respIndex) => (
-                                            <li key={respIndex}>{resp}</li>
+                                        {exp.responsibilities.map((resp) => (
+                                            <li key={resp}>{resp}</li>
                                         ))}
                                     </ul>
-                                )}
+                                </details>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

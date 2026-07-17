@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Experience from './components/Experience';
 import Footer from './components/Footer';
 
 function App() {
@@ -24,11 +22,11 @@ function App() {
   return (
     <div className="App">
       <Navigation theme={theme} toggleTheme={toggleTheme} />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+      <main id="main-content">
+        <Hero />
+        <Projects />
+        <Experience />
+      </main>
       <Footer />
     </div>
   );
