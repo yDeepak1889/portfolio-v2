@@ -19,29 +19,46 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout old portfolio
         uses: actions/checkout@v4
-      
+        with:
+          ref: 1f433db481396f47352e9918790d0e11b6d60a02
+          path: root-site
+
+      - name: Checkout new portfolio
+        uses: actions/checkout@v4
+        with:
+          path: preview-site
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm ci
-      
-      - name: Build
-        run: npm run build
-      
+          cache: npm
+          cache-dependency-path: |
+            root-site/package-lock.json
+            preview-site/package-lock.json
+
+      - name: Build old portfolio at root
+        working-directory: root-site
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build new portfolio at subpath
+        working-directory: preview-site
+        run: |
+          npm ci
+          npm run build -- --base=/design-preview-3456/ --outDir=../root-site/dist/design-preview-3456 --emptyOutDir=false
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
-      - name: Upload artifact
+
+      - name: Upload combined site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
-  
+          path: root-site/dist
+
   deploy:
     environment:
       name: github-pages
