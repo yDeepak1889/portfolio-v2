@@ -17,9 +17,6 @@ const Hero = () => {
                     <h1>
                         Richa Chaturvedi<span className="accent-text"></span>
                     </h1>
-                    <h2 className="hero-role">
-                        Senior Content Designer with 6+ YOE
-                    </h2>
                     <div className="hero-bio">
                         <p>
                             I'm a <strong>Senior Content Designer</strong> at <strong>SAP Labs</strong> with <strong>6+ years of experience</strong> designing user-centered content for complex digital products.
