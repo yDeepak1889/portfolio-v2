@@ -3,9 +3,9 @@ import './Hero.css';
 
 const skills = [
     { label: 'Context Engineering', tooltip: 'Current favourite' },
-    { label: 'Content Systems' },
-    { label: 'Product Thinking' },
     { label: 'UX Design' },
+    { label: 'Product Thinking' },
+    { label: 'Design Systems' },
 ];
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
                     </h1>
                     <div className="hero-bio">
                         <p>
-                            I'm a <strong>Senior Content Designer</strong> at <strong>SAP Labs</strong> with <strong>6+ years of experience</strong> designing user-centered content for complex digital products.
+                            As a Content Designer with 6+ years of experience, I enjoy making complex products feel simpler, bringing together content, design, and systems to create experiences that are clear, useful, and human.
                         </p>
                     </div>
 

@@ -22,7 +22,7 @@ export const projects = [
     {
         name: 'Tone & Voice Framework',
         category: 'Design system',
-        context: 'Team framework',
+        context: 'Uni Cards',
         featured: true,
         challenge: 'Teams needed a shared way to decide when communication should be empathetic, apologetic, helpful, or direct.',
         approach: 'Created a framework that maps tone decisions to user emotion, needs, and product context.',
@@ -50,7 +50,7 @@ export const projects = [
     {
         name: 'SIM Binding',
         category: 'Security flow',
-        context: 'Fintech',
+        context: 'Uni Cards',
         challenge: 'Make a technical security process understandable to everyday users.',
         approach: 'Translated SIM binding into a familiar matchmaking analogy and clarified the steps around it.',
         contribution: 'Complexity reduction · Security content · Interaction flow',
@@ -59,7 +59,7 @@ export const projects = [
     {
         name: 'Writing Style Guidelines',
         category: 'Documentation',
-        context: 'Content practice',
+        context: 'Uni Cards',
         challenge: 'A growing content design practice needed consistency without a heavyweight rulebook.',
         approach: 'Synthesized established industry guidance into a simpler framework tailored to a small team.',
         contribution: 'Content system · Governance · Team enablement',

@@ -5,9 +5,8 @@ const Experience = () => {
         {
             title: 'Senior Content Designer',
             company: 'SAP Labs',
-            period: '2025 - Present',
+            period: 'Feb 2025 - Present',
             location: 'Bengaluru, India',
-            current: true,
             description: 'Leading enterprise content design, AI initiatives, and scalable content systems across SAP products and teams.',
             focus: ['AI & Joule', 'Content systems', 'Context Engineering'],
             responsibilities: [
@@ -25,7 +24,7 @@ const Experience = () => {
         {
             title: 'Senior UX Writer',
             company: 'ALLEN Digital',
-            period: '2023 - 2025',
+            period: 'Feb 2024 - Dec 2024',
             location: 'Bengaluru, India',
             description: 'Led UX writing initiatives for digital education products and created user-focused content that enhanced learning experiences.',
             focus: ['0–1 products', 'Edtech', 'Design guidelines'],
@@ -39,7 +38,7 @@ const Experience = () => {
         {
             title: 'UX Writer II',
             company: 'Uni Cards',
-            period: '2022 - 2023',
+            period: 'Jan 2021 - Feb 2024',
             location: 'Bengaluru, India',
             description: 'Crafted user-centric content for fintech products, simplifying complex financial concepts for users.',
             focus: ['Fintech', 'Product features', 'Voice & tone'],
@@ -53,7 +52,7 @@ const Experience = () => {
         {
             title: 'UX Writer',
             company: 'Fisdom',
-            period: '2021 - 2022',
+            period: 'Aug 2020 - Jan 2021',
             location: 'Bengaluru, India',
             description: 'Developed clear, trustworthy content for investment and wealth management platforms.',
             focus: ['Financial UX', 'Microcopy', 'Feature launches'],
@@ -66,7 +65,7 @@ const Experience = () => {
         {
             title: 'UX Writer Intern',
             company: 'Yulu',
-            period: '2020 - 2021',
+            period: 'Dec 2019 - Jul 2020',
             location: 'Bengaluru, India',
             description: 'Contributed to UX writing for micro-mobility platform, focusing on user engagement and clarity.',
             focus: ['Mobility', 'User flows', 'Content audits'],
@@ -79,7 +78,7 @@ const Experience = () => {
         {
             title: 'Corporate Communications Intern',
             company: 'ABB India',
-            period: '2020',
+            period: 'Jun 2019 - Sep 2019',
             location: 'India',
             description: 'Supported corporate communications initiatives and internal content development.',
             focus: ['Communications', 'Brand messaging'],
@@ -103,7 +102,7 @@ const Experience = () => {
                     {experiences.map((exp, index) => (
                         <article
                             key={exp.company}
-                            className={`experience-item ${exp.current ? 'current' : ''}`}
+                            className="experience-item"
                         >
                             <div className="experience-index">
                                 {String(index + 1).padStart(2, '0')}
@@ -115,7 +114,6 @@ const Experience = () => {
                                         <h3>{exp.title}</h3>
                                     </div>
                                     <div className="experience-date">
-                                        {exp.current && <span className="badge">Current</span>}
                                         <p>{exp.period}</p>
                                         <p>{exp.location}</p>
                                     </div>
