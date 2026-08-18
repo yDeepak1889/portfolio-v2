@@ -1,4 +1,12 @@
+import heroIllustration from '../assets/richa-illustration.png';
 import './Hero.css';
+
+const skills = [
+    { label: 'Context Engineering', tooltip: 'Current favourite' },
+    { label: 'Content Systems' },
+    { label: 'Product Thinking' },
+    { label: 'UX Design' },
+];
 
 const Hero = () => {
     return (
@@ -7,10 +15,10 @@ const Hero = () => {
                 <div className="hero-copy fade-in-up">
                     <p className="hero-greeting">Hello, I'm</p>
                     <h1>
-                        Richa Chaturvedi<span className="accent-text">.</span>
+                        Richa Chaturvedi<span className="accent-text"></span>
                     </h1>
                     <h2 className="hero-role">
-                        Senior Content Designer creating clear, human experiences.
+                        Senior Content Designer with 6+ YOE
                     </h2>
                     <div className="hero-bio">
                         <p>
@@ -35,7 +43,7 @@ const Hero = () => {
                     </div>
 
                     <details className="hero-more">
-                        <summary>More about my work</summary>
+                        <summary>More details about my current work</summary>
                         <div>
                             <p>
                                 At SAP, I'm redefining content design systems and rewriting content guidelines across multiple products and features to create more consistent, scalable user experiences. I've also contributed to conversational design guidelines for Joule AI, helping shape the voice and interaction patterns for AI-powered experiences.
@@ -50,49 +58,37 @@ const Hero = () => {
                     </details>
                 </div>
 
-                <aside className="hero-summary" aria-label="Professional summary">
-                    <div className="summary-header">
-                        <div className="summary-monogram" aria-hidden="true">RC</div>
-                        <div>
-                            <p>Senior Content Designer</p>
-                            <span>SAP Labs · Bengaluru</span>
-                        </div>
-                    </div>
-                    <div className="summary-stats">
-                        <div>
-                            <strong>6+</strong>
-                            <span>Years of experience</span>
-                        </div>
-                        <div>
-                            <strong>15+</strong>
-                            <span>Features designed</span>
-                        </div>
-                    </div>
-                    <ul className="summary-thinking" aria-label="How I approach design">
-                        <li>
-                            <strong>Product thinking</strong>
-                            <span>Frame the right problem and align user and business needs.</span>
+                <div className="hero-visual">
+                    <img
+                        src={heroIllustration}
+                        width={1254}
+                        height={1254}
+                        alt="Illustration of Richa at her desk with two dogs, surrounded by notes on content design, product thinking, UX thinking, systems thinking, and context engineering."
+                    />
+                </div>
+            </div>
+
+            <div className="container">
+                <ul className="hero-skills" aria-label="Areas of focus">
+                    {skills.map(({ label, tooltip }) => (
+                        <li key={label} className={tooltip ? 'has-tooltip' : undefined}>
+                            {tooltip ? (
+                                <span tabIndex={0} aria-describedby="skill-tooltip-favourite">
+                                    {label}
+                                    <span
+                                        id="skill-tooltip-favourite"
+                                        role="tooltip"
+                                        className="skill-tooltip"
+                                    >
+                                        {tooltip}
+                                    </span>
+                                </span>
+                            ) : (
+                                <span>{label}</span>
+                            )}
                         </li>
-                        <li>
-                            <strong>UX thinking</strong>
-                            <span>Shape intuitive journeys and remove cognitive friction.</span>
-                        </li>
-                        <li>
-                            <strong>UI & content thinking</strong>
-                            <span>Make every label, state, and interaction clear and purposeful.</span>
-                        </li>
-                    </ul>
-                    <div className="summary-contact">
-                        <a href="mailto:richauxw@gmail.com">richauxw@gmail.com</a>
-                        <a
-                            href="https://www.linkedin.com/in/richa-chaturvedi-ux/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            LinkedIn <span aria-hidden="true">↗</span>
-                        </a>
-                    </div>
-                </aside>
+                    ))}
+                </ul>
             </div>
         </section>
     );

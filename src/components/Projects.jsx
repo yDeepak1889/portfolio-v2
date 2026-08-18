@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import './Projects.css';
 import { projects } from '../data/projects';
 
 const Projects = () => {
+    const [showAllProjects, setShowAllProjects] = useState(false);
     const featuredProjects = projects.filter((project) => project.featured);
     const additionalProjects = projects.filter((project) => !project.featured);
 
@@ -51,24 +53,29 @@ const Projects = () => {
                 <div className="section-heading">
                     <p className="eyebrow">Case studies</p>
                     <h2>Problems framed. Journeys shaped. <span className="accent-text">Systems built.</span></h2>
-                    <p className="section-intro">
-                        A selection of product features, user flows, and content systems that show how I move
-                        from ambiguity to a clearer experience.
-                    </p>
                 </div>
 
                 <div className="projects-grid">
                     {featuredProjects.map((project, index) => renderProject(project, index))}
                 </div>
 
-                <details className="more-work">
-                    <summary>View {additionalProjects.length} more case studies</summary>
+                {showAllProjects ? (
                     <div className="projects-grid more-projects">
                         {additionalProjects.map((project, index) => (
                             renderProject(project, index + featuredProjects.length)
                         ))}
                     </div>
-                </details>
+                ) : (
+                    <div className="more-work">
+                        <button
+                            type="button"
+                            className="more-work-toggle"
+                            onClick={() => setShowAllProjects(true)}
+                        >
+                            View {additionalProjects.length} more case studies
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );

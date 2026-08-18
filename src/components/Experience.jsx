@@ -95,11 +95,8 @@ const Experience = () => {
         <section id="experience" className="experience">
             <div className="container">
                 <div className="section-heading">
-                    <p className="eyebrow">Experience</p>
+                    <p className="eyebrow">Work experience</p>
                     <h2>Designing across products, teams, and <span className="accent-text">systems.</span></h2>
-                    <p className="section-intro">
-                        Six years across enterprise software, education, fintech, mobility, and financial products.
-                    </p>
                 </div>
 
                 <div className="experience-list">
@@ -131,7 +128,7 @@ const Experience = () => {
                                 </ul>
 
                                 <details>
-                                    <summary>View role highlights</summary>
+                                    <summary>Role highlights</summary>
                                     <ul className="responsibilities">
                                         {exp.responsibilities.map((resp) => (
                                             <li key={resp}>{resp}</li>

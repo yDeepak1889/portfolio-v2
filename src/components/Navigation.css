@@ -90,6 +90,26 @@
     gap: 0.65rem;
 }
 
+.nav-icon {
+    display: grid;
+    place-items: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+}
+
+.nav-icon svg {
+    width: 1.05rem;
+    height: 1.05rem;
+}
+
+.nav-icon:hover {
+    border-color: var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+
 .nav-resume {
     padding: 0.6rem 0.8rem;
     border: 1px solid var(--color-border-strong);
@@ -178,6 +198,7 @@
 }
 
 @media (max-width: 520px) {
+    .nav-icon,
     .nav-resume {
         display: none;
     }

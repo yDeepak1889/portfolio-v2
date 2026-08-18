@@ -1,0 +1,11 @@
+.articles-page {
+    min-height: 100vh;
+    padding: calc(5rem + var(--spacing-xl)) 0 var(--spacing-2xl);
+}
+
+.articles-page h1 {
+    color: var(--color-text-primary);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.04em;
+}
