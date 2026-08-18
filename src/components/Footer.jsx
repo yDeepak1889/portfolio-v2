@@ -76,11 +76,10 @@ const Footer = () => {
                 </blockquote>
             </div>
             <div className="container footer-content">
-                <p className="footer-text">
-                    Richa Chaturvedi · Senior Content Designer
-                </p>
                 <p className="footer-copyright">
-                    © {currentYear} · Designed with product, UX, and content thinking
+                    © {currentYear} Designed by Richa Chaturvedi
+                    <span className="footer-dot" aria-hidden="true">·</span>
+                    Brought to life with Claude
                 </p>
             </div>
         </footer>
