@@ -22,7 +22,6 @@ const CheckIcon = () => (
 );
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
     const [copied, setCopied] = useState(false);
 
     useEffect(() => {
@@ -77,9 +76,9 @@ const Footer = () => {
             </div>
             <div className="container footer-content">
                 <p className="footer-copyright">
-                    © {currentYear} Designed by Richa Chaturvedi
+                    Designed by Richa Chaturvedi
                     <span className="footer-dot" aria-hidden="true">·</span>
-                    Brought to life with Claude
+                    Brought to life with Claude <span className="footer-dot" aria-hidden="true">·</span> August 2026
                 </p>
             </div>
         </footer>
