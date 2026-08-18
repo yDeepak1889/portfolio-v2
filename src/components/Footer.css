@@ -4,8 +4,8 @@
 }
 
 .footer-cta {
-    padding-top: clamp(5rem, 9vw, 8rem);
-    padding-bottom: clamp(5rem, 9vw, 8rem);
+    padding-top: clamp(2.5rem, 5vw, 4rem);
+    padding-bottom: clamp(3.5rem, 7vw, 6rem);
     text-align: center;
 }
 
@@ -91,6 +91,7 @@
     background: #f7ebeb;
     color: var(--color-text-primary);
     font-size: clamp(0.68rem, 1.15vw, 0.88rem);
+    font-style: italic;
     font-weight: 500;
     line-height: 1.5;
     text-align: center;
