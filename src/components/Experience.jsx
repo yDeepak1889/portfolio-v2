@@ -54,7 +54,7 @@ const Experience = () => {
             company: 'Fisdom',
             period: 'Aug 2020 - Jan 2021',
             location: 'Bengaluru, India',
-            badge: 'Intern',
+            badge: 'Internship',
             description: 'Developed clear, trustworthy content for investment and wealth management platforms.',
             focus: ['Financial UX', 'Microcopy', 'Feature launches'],
             responsibilities: [
@@ -68,7 +68,7 @@ const Experience = () => {
             company: 'Yulu',
             period: 'Dec 2019 - Jul 2020',
             location: 'Bengaluru, India',
-            badge: 'Intern',
+            badge: 'Internship',
             description: 'Contributed to UX writing for micro-mobility platform, focusing on user engagement and clarity.',
             focus: ['Mobility', 'User flows', 'Content audits'],
             responsibilities: [
@@ -79,10 +79,10 @@ const Experience = () => {
         },
         {
             title: 'Corporate Communications Intern',
-            company: 'ABB India',
+            company: 'ABB',
             period: 'Jun 2019 - Sep 2019',
-            location: 'India',
-            badge: 'Intern',
+            location: 'Bangalore, India',
+            badge: 'Internship',
             description: 'Supported corporate communications initiatives and internal content development.',
             focus: ['Communications', 'Brand messaging'],
             responsibilities: [
@@ -129,7 +129,7 @@ const Experience = () => {
                                 </ul>
 
                                 <details>
-                                    <summary>Role highlights</summary>
+                                    <summary>Key Contributions</summary>
                                     <ul className="responsibilities">
                                         {exp.responsibilities.map((resp) => (
                                             <li key={resp}>{resp}</li>

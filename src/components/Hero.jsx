@@ -24,7 +24,7 @@ const Hero = () => {
                     </div>
 
                     <details className="hero-more">
-                        <summary>More details about my current work</summary>
+                        <summary>More about my current role</summary>
                         <div>
                             <p>
                                 At SAP, I'm redefining content design systems and rewriting content guidelines across multiple products and features to create more consistent, scalable user experiences. I've also contributed to conversational design guidelines for Joule AI, helping shape the voice and interaction patterns for AI-powered experiences.

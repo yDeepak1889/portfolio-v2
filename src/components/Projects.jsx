@@ -28,7 +28,7 @@ const Projects = () => {
             className={`project-card ${project.featured ? 'featured' : ''}`}
         >
             <div className="project-meta">
-                <span>{String(index + 1).padStart(2, '0')}</span>
+                <span>{index + 1}</span>
                 <span>{project.category}</span>
             </div>
 
@@ -54,9 +54,9 @@ const Projects = () => {
                     href={project.pdfLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`View ${project.name} case study PDF in a new tab`}
+                    aria-label={`View ${project.name} project PDF in a new tab`}
                 >
-                    View case study <span aria-hidden="true">↗</span>
+                    View Project <span aria-hidden="true">↗</span>
                 </a>
             </div>
         </article>
@@ -85,7 +85,7 @@ const Projects = () => {
                                 type="button"
                                 className="more-work-collapse"
                                 onClick={collapseProjects}
-                                aria-label="Collapse additional case studies"
+                                aria-label="Collapse additional projects"
                             >
                                 <span aria-hidden="true">↑</span>
                             </button>
