@@ -138,16 +138,6 @@ const Navigation = ({ theme, toggleTheme }) => {
                 </a>
               </li>
             ))}
-            <li>
-              <Link
-                to="/articles"
-                className={isArticlesPage ? 'active' : ''}
-                aria-current={isArticlesPage ? 'page' : undefined}
-                onClick={closeMenu}
-              >
-                Articles
-              </Link>
-            </li>
             <li className="mobile-external">
               <a href={EMAIL} onClick={closeMenu}>
                 Email
