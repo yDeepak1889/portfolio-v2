@@ -1,6 +1,6 @@
 .projects {
     background: var(--color-bg-secondary);
-    padding-bottom: clamp(3rem, 6vw, 5rem);
+    padding-bottom: clamp(2rem, 3vw, 2.5rem);
 }
 
 .projects-grid {

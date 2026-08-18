@@ -10,7 +10,7 @@ const RESUME =
 
 const sections = [
   { id: 'home', label: 'About' },
-  { id: 'projects', label: 'Case Studies' },
+  { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Work Experience' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -145,7 +145,7 @@ const Navigation = ({ theme, toggleTheme }) => {
                 aria-current={isArticlesPage ? 'page' : undefined}
                 onClick={closeMenu}
               >
-                Read Articles
+                Articles
               </Link>
             </li>
             <li className="mobile-external">

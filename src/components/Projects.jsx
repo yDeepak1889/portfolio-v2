@@ -66,8 +66,7 @@ const Projects = () => {
         <section id="projects" className="projects">
             <div className="container">
                 <div className="section-heading">
-                    <p className="eyebrow">Case studies</p>
-                    <h2>Problems framed. Journeys shaped. <span className="accent-text">Systems built.</span></h2>
+                    <p className="eyebrow">Projects</p>
                 </div>
 
                 <div className="projects-grid">

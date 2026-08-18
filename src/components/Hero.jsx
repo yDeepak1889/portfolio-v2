@@ -23,22 +23,6 @@ const Hero = () => {
                         </p>
                     </div>
 
-                    <div className="hero-cta">
-                        <a href="#projects" className="btn btn-primary">
-                            View selected work
-                            <span aria-hidden="true">↓</span>
-                        </a>
-                        <a
-                            href="https://drive.google.com/file/d/199LRFkWY4J9XqNrGREDN8jXGwIatEJoK/view?usp=drive_link"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-secondary"
-                        >
-                            View resume
-                            <span aria-hidden="true">↗</span>
-                        </a>
-                    </div>
-
                     <details className="hero-more">
                         <summary>More details about my current work</summary>
                         <div>

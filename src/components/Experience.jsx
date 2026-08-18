@@ -54,6 +54,7 @@ const Experience = () => {
             company: 'Fisdom',
             period: 'Aug 2020 - Jan 2021',
             location: 'Bengaluru, India',
+            badge: 'Intern',
             description: 'Developed clear, trustworthy content for investment and wealth management platforms.',
             focus: ['Financial UX', 'Microcopy', 'Feature launches'],
             responsibilities: [
@@ -67,6 +68,7 @@ const Experience = () => {
             company: 'Yulu',
             period: 'Dec 2019 - Jul 2020',
             location: 'Bengaluru, India',
+            badge: 'Intern',
             description: 'Contributed to UX writing for micro-mobility platform, focusing on user engagement and clarity.',
             focus: ['Mobility', 'User flows', 'Content audits'],
             responsibilities: [
@@ -80,6 +82,7 @@ const Experience = () => {
             company: 'ABB India',
             period: 'Jun 2019 - Sep 2019',
             location: 'India',
+            badge: 'Intern',
             description: 'Supported corporate communications initiatives and internal content development.',
             focus: ['Communications', 'Brand messaging'],
             responsibilities: [
@@ -95,7 +98,6 @@ const Experience = () => {
             <div className="container">
                 <div className="section-heading">
                     <p className="eyebrow">Work experience</p>
-                    <h2>Designing across products, teams, and <span className="accent-text">systems.</span></h2>
                 </div>
 
                 <div className="experience-list">
@@ -105,7 +107,7 @@ const Experience = () => {
                             className="experience-item"
                         >
                             <div className="experience-index">
-                                {String(index + 1).padStart(2, '0')}
+                                {index + 1}
                             </div>
                             <div className="experience-main">
                                 <div className="experience-header">
@@ -114,6 +116,7 @@ const Experience = () => {
                                         <h3>{exp.title}</h3>
                                     </div>
                                     <div className="experience-date">
+                                        {exp.badge && <span className="badge">{exp.badge}</span>}
                                         <p>{exp.period}</p>
                                         <p>{exp.location}</p>
                                     </div>

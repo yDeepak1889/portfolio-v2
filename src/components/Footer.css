@@ -35,25 +35,16 @@
     margin-bottom: var(--spacing-xl);
 }
 
-.footer-icon {
-    display: grid;
-    place-items: center;
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid var(--color-border-strong);
-    border-radius: var(--radius-sm);
+.footer-email {
     color: var(--color-text-primary);
-    transition: border-color var(--transition-normal), color var(--transition-normal),
-        background-color var(--transition-normal);
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: color var(--transition-normal);
 }
 
-.footer-icon svg {
-    width: 1.2rem;
-    height: 1.2rem;
-}
-
-.footer-icon:hover {
-    border-color: var(--color-text-primary);
+.footer-email:hover {
     color: var(--color-accent-primary);
 }
 
