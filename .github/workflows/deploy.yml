@@ -19,45 +19,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout old portfolio
+      # The previous portfolio is kept in this repository's history at commit
+      # 1f433db481396f47352e9918790d0e11b6d60a02. It is deliberately no longer built.
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: 1f433db481396f47352e9918790d0e11b6d60a02
-          path: root-site
-
-      - name: Checkout new portfolio
-        uses: actions/checkout@v4
-        with:
-          path: preview-site
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: npm
-          cache-dependency-path: |
-            root-site/package-lock.json
-            preview-site/package-lock.json
 
-      - name: Build old portfolio at root
-        working-directory: root-site
+      - name: Build site
         run: |
           npm ci
           npm run build
 
-      - name: Build new portfolio at subpath
-        working-directory: preview-site
-        run: |
-          npm ci
-          npm run build -- --base=/design-preview-3456/ --outDir=../root-site/dist/design-preview-3456 --emptyOutDir=false
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload combined site
+      - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: root-site/dist
+          path: dist
 
   deploy:
     environment:
