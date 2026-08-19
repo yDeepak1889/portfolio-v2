@@ -35,13 +35,13 @@ const LinkedInIcon = () => (
 
 const Navigation = ({ theme, toggleTheme }) => {
   const location = useLocation();
-  const isArticlesPage = location.pathname.replace(/\/$/, '') === '/articles';
+  const isSubPage = location.pathname.replace(/\/$/, '') !== '';
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (isArticlesPage) {
+    if (isSubPage) {
       setActiveSection(null);
       return undefined;
     }
@@ -74,7 +74,7 @@ const Navigation = ({ theme, toggleTheme }) => {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isArticlesPage]);
+  }, [isSubPage]);
 
   useEffect(() => {
     if (!isMenuOpen) return undefined;
@@ -99,7 +99,7 @@ const Navigation = ({ theme, toggleTheme }) => {
   };
 
   const sectionHref = (id) => {
-    if (!isArticlesPage) return `#${id}`;
+    if (!isSubPage) return `#${id}`;
     const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     return `${base}/#${id}`;
   };
@@ -110,7 +110,7 @@ const Navigation = ({ theme, toggleTheme }) => {
         Skip to content
       </a>
       <nav
-        className={`navigation ${isScrolled || isArticlesPage ? 'scrolled' : ''}`}
+        className={`navigation ${isScrolled || isSubPage ? 'scrolled' : ''}`}
         aria-label="Primary navigation"
       >
         <div className="container nav-container">
@@ -128,9 +128,9 @@ const Navigation = ({ theme, toggleTheme }) => {
               <li key={id}>
                 <a
                   href={sectionHref(id)}
-                  className={!isArticlesPage && activeSection === id ? 'active' : ''}
+                  className={!isSubPage && activeSection === id ? 'active' : ''}
                   aria-current={
-                    !isArticlesPage && activeSection === id ? 'location' : undefined
+                    !isSubPage && activeSection === id ? 'location' : undefined
                   }
                   onClick={closeMenu}
                 >

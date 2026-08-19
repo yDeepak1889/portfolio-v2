@@ -6,6 +6,8 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Articles from './pages/Articles';
+import SapNotifications from './pages/SapNotifications';
+import ProjectCaseStudy from './pages/ProjectCaseStudy';
 
 function HomePage() {
   const location = useLocation();
@@ -51,6 +53,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/articles" element={<Articles />} />
+          <Route
+            path="/projects/sap-fiori-notifications"
+            element={<SapNotifications />}
+          />
+          <Route path="/projects/:slug" element={<ProjectCaseStudy />} />
         </Routes>
       </div>
     </BrowserRouter>

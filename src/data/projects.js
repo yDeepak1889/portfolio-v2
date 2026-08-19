@@ -1,4 +1,26 @@
+import sapNotificationsThumb from '../assets/sap/sap-notifications-thumb.jpg';
+import loginOnboardingThumb from '../assets/projects/login-onboarding/thumb.jpg';
+import breakThumb from '../assets/projects/break/thumb.jpg';
+import toneVoiceThumb from '../assets/projects/tone-voice/thumb.jpg';
+import uniCashThumb from '../assets/projects/uni-cash/thumb.jpg';
+import p2pThumb from '../assets/projects/p2p-lending/thumb.jpg';
+import simBindingThumb from '../assets/projects/sim-binding/thumb.jpg';
+import writingGuidelinesThumb from '../assets/projects/writing-guidelines/thumb.jpg';
+import carnivalThumb from '../assets/projects/grand-uni-carnival/thumb.jpg';
+
 export const projects = [
+    {
+        name: 'Notification Guidance',
+        category: 'Design system',
+        context: 'SAP Fiori Design System',
+        featured: true,
+        challenge: 'The notification guidance had the information designers needed, but it was difficult to scan and apply.',
+        approach: 'Restructured the guidance around the decisions designers make, rewrote it as actionable recommendations, and standardized the language across the notification experience.',
+        contribution: 'Content strategy · Information architecture · UX writing',
+        caseStudyLink: '/projects/sap-fiori-notifications',
+        thumbnail: sapNotificationsThumb,
+        thumbnailAlt: 'The published SAP Fiori Notifications guidance page with its blue header and on-this-page navigation.'
+    },
     {
         name: 'Login & Onboarding',
         category: 'User flow',
@@ -7,7 +29,9 @@ export const projects = [
         challenge: 'Students were dropping off before completing login and onboarding.',
         approach: 'Audited the journey, identified content friction, and revised the flow to make each step easier to understand.',
         contribution: 'UX audit · Journey design · Interface content',
-        pdfLink: 'https://drive.google.com/file/d/1hYQT9Q3GE_oQ3JOcPwdUlsbCcI4qjdAZ/view?usp=sharing'
+        caseStudyLink: '/projects/login-onboarding',
+        thumbnail: loginOnboardingThumb,
+        thumbnailAlt: 'Revised ALLEN Digital onboarding screens leading into the free trial.'
     },
     {
         name: 'Break',
@@ -17,7 +41,9 @@ export const projects = [
         challenge: 'Students preparing for JEE and NEET needed support for their mental well-being during a high-pressure journey.',
         approach: 'Framed and designed a product feature that could introduce moments of support within the learning experience.',
         contribution: 'Product framing · Feature design · End-to-end content',
-        pdfLink: 'https://drive.google.com/file/d/1UIKKkfZ52HHGkljXCWRUSnAp8Pc8aGZ7/view'
+        caseStudyLink: '/projects/break',
+        thumbnail: breakThumb,
+        thumbnailAlt: 'Illustrated Break story screens encouraging students to pause and reset.'
     },
     {
         name: 'Tone & Voice Framework',
@@ -27,7 +53,9 @@ export const projects = [
         challenge: 'Teams needed a shared way to decide when communication should be empathetic, apologetic, helpful, or direct.',
         approach: 'Created a framework that maps tone decisions to user emotion, needs, and product context.',
         contribution: 'Systems thinking · Content standards · Team enablement',
-        pdfLink: 'https://drive.google.com/file/d/1DbdsykCIBNZN0JgplAp2_dhUY0woflnt/view'
+        caseStudyLink: '/projects/tone-voice-framework',
+        thumbnail: toneVoiceThumb,
+        thumbnailAlt: 'The eight tones of the Uni product personality shown as a set of labels.'
     },
     {
         name: 'Uni Cash',
@@ -36,7 +64,9 @@ export const projects = [
         challenge: 'Explain how customers could transfer credit to a bank account within a risk-based limit.',
         approach: 'Structured the feature content around the user task while making limits and financial conditions easier to understand.',
         contribution: 'Feature content · Financial UX · Information hierarchy',
-        pdfLink: 'https://drive.google.com/file/d/1xmYA9B4Nm7xkt9Re3Ro37nV0c3qf4UGd/view'
+        caseStudyLink: '/projects/uni-cash',
+        thumbnail: uniCashThumb,
+        thumbnailAlt: 'Uni Cash screens showing the limit, transfer amount, and bank transfer flow.'
     },
     {
         name: 'P2P Lending',
@@ -45,7 +75,9 @@ export const projects = [
         challenge: 'Introduce peer-to-peer lending as an unfamiliar financial product without adding cognitive load.',
         approach: 'Used familiar comparisons and direct language to help users understand the product proposition.',
         contribution: 'Product narrative · Simplification · UX writing',
-        pdfLink: 'https://drive.google.com/file/d/1uhhuNNlgvBDS6A3H4M6c3lRne7RVTNMT/view'
+        caseStudyLink: '/projects/p2p-investing',
+        thumbnail: p2pThumb,
+        thumbnailAlt: 'P2P investing screens for choosing a plan, entering an amount, and confirming.'
     },
     {
         name: 'SIM Binding',
@@ -54,7 +86,9 @@ export const projects = [
         challenge: 'Make a technical security process understandable to everyday users.',
         approach: 'Translated SIM binding into a familiar matchmaking analogy and clarified the steps around it.',
         contribution: 'Complexity reduction · Security content · Interaction flow',
-        pdfLink: 'https://drive.google.com/file/d/1l85lHp6qKcx0P_yGDDNjnoDljB7GltXY/view?usp=drive_link'
+        caseStudyLink: '/projects/sim-binding',
+        thumbnail: simBindingThumb,
+        thumbnailAlt: 'A SIM card behind a security shield, representing SIM binding.'
     },
     {
         name: 'Writing Style Guidelines',
@@ -63,7 +97,9 @@ export const projects = [
         challenge: 'A growing content design practice needed consistency without a heavyweight rulebook.',
         approach: 'Synthesized established industry guidance into a simpler framework tailored to a small team.',
         contribution: 'Content system · Governance · Team enablement',
-        pdfLink: 'https://drive.google.com/file/d/1NKc6zPL_0I2bOUS98Y-_c2cIEujYzaq6/view'
+        caseStudyLink: '/projects/writing-style-guidelines',
+        thumbnail: writingGuidelinesThumb,
+        thumbnailAlt: 'Style guide examples contrasting active and passive voice, with formatting rules.'
     },
     {
         name: 'Grand Uni Carnival',
@@ -72,6 +108,8 @@ export const projects = [
         challenge: 'Encourage adoption of a newly launched app and help users discover more of the product.',
         approach: 'Developed an engagement feature that connected transaction activity with product discovery.',
         contribution: 'Campaign experience · Product adoption · Interface content',
-        pdfLink: 'https://drive.google.com/file/d/1x4GCBzHLmO62HMHl2bM8r3nPxVkSUII9/view'
+        caseStudyLink: '/projects/grand-uni-carnival',
+        thumbnail: carnivalThumb,
+        thumbnailAlt: 'The Grand Uni Carnival poster artwork with a fairground tent and ferris wheel.'
     }
 ];
