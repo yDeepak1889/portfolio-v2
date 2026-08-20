@@ -12,7 +12,7 @@ export const projects = [
     {
         name: 'Notification Guidelines',
         category: 'Design system',
-        context: 'SAP Fiori Design System',
+        context: 'SAP Labs',
         featured: true,
         challenge: 'The notification guidelines had the information designers needed, but it was difficult to scan and apply.',
         approach: 'Restructured the guidelines around the decisions designers make, rewrote them as actionable recommendations, and standardized the language across the notification experience.',
