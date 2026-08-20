@@ -10,7 +10,7 @@ const projectMeta = [
     { label: 'Design system', value: 'SAP Fiori Design System' },
     { label: 'Role', value: 'Senior Content Designer' },
     { label: 'Disciplines', value: 'Content Strategy · UX Writing · Information Architecture' },
-    { label: 'Scope', value: 'End-to-end rewrite of the Notification guidance' },
+    { label: 'Scope', value: 'End-to-end rewrite of the Notification guidelines' },
 ];
 
 const designerQuestions = [
@@ -42,7 +42,7 @@ const roleAreas = [
     },
     {
         title: 'Design-system thinking',
-        copy: 'Designed the guidance to work as a reusable reference for teams across SAP.',
+        copy: 'Designed the guidelines to work as a reusable reference for teams across SAP.',
     },
 ];
 
@@ -64,7 +64,7 @@ const approachQuestions = [
     },
     {
         number: '4',
-        title: 'How can we make the guidance actionable?',
+        title: 'How can we make the guidelines actionable?',
         copy: 'Tell users what to do—not just how the component works.',
     },
 ];
@@ -185,7 +185,7 @@ const clarityAtScale = [
 const outcomes = [
     {
         title: 'Clearer structure',
-        copy: 'Designers can navigate the guidance based on what they are trying to understand.',
+        copy: 'Designers can navigate the guidelines based on what they are trying to understand.',
     },
     {
         title: 'More actionable recommendations',
@@ -196,7 +196,7 @@ const outcomes = [
         copy: 'Related concepts are described using a shared vocabulary.',
     },
     {
-        title: 'Scalable guidance',
+        title: 'Scalable guidelines',
         copy: 'The system can support teams working across different SAP products and experiences.',
     },
     {
@@ -208,7 +208,7 @@ const outcomes = [
 const impact = [
     {
         title: 'End-to-end rewrite',
-        copy: 'Reworked the notification guidance across content, structure, terminology, and recommendations.',
+        copy: 'Reworked the notification guidelines across content, structure, terminology, and recommendations.',
     },
     {
         title: 'System-level thinking',
@@ -216,11 +216,11 @@ const impact = [
     },
     {
         title: 'Shared language',
-        copy: 'Improved consistency across notification concepts and guidance.',
+        copy: 'Improved consistency across notification concepts and guidelines.',
     },
     {
         title: 'Decision-focused',
-        copy: 'Shifted the guidance toward helping designers make informed choices.',
+        copy: 'Shifted the guidelines toward helping designers make informed choices.',
     },
 ];
 
@@ -236,7 +236,7 @@ const SapNotifications = () => {
                     <div className="container">
                         <h1>Designing a shared language for notification experiences</h1>
                         <p className="cs-lead">
-                            Reframing SAP Fiori&apos;s notification guidance into a clearer, more
+                            Reframing SAP Fiori&apos;s notification guidelines into a clearer, more
                             scalable system for designing enterprise experiences.
                         </p>
 
@@ -252,11 +252,11 @@ const SapNotifications = () => {
                         <figure className="cs-figure cs-figure-hero">
                             <img
                                 src={guidancePage}
-                                alt="The published SAP Fiori Notifications guidance page, showing the intro section and an on-this-page navigation list."
+                                alt="The published SAP Fiori Notifications guidelines page, showing the intro section and an on-this-page navigation list."
                                 loading="lazy"
                             />
                             <figcaption>
-                                SAP&apos;s notification guidance covers usage, responsiveness,
+                                SAP&apos;s notification guidelines cover usage, responsiveness,
                                 notification types, lists, groups, items, settings, behavior,
                                 interaction, and mobile integration.
                             </figcaption>
@@ -267,7 +267,7 @@ const SapNotifications = () => {
                 <section className="cs-section">
                     <div className="container cs-column">
                         <p className="cs-kicker">The challenge</p>
-                        <h2>The guidance had the information. It needed a better experience.</h2>
+                        <h2>The guidelines had the information. They needed a better experience.</h2>
                         <p>
                             Notifications are a small UI element with a surprisingly complex set of
                             decisions behind them. Designers need to understand:
@@ -278,7 +278,7 @@ const SapNotifications = () => {
                             ))}
                         </ul>
                         <p>
-                            The existing guidance covered these topics, but the information could be
+                            The existing guidelines covered these topics, but the information could be
                             difficult to scan and apply.
                         </p>
                         <blockquote className="cs-callout">
@@ -291,7 +291,7 @@ const SapNotifications = () => {
                 <section className="cs-section cs-section-alt">
                     <div className="container cs-column">
                         <p className="cs-kicker">My role</p>
-                        <h2>I led the content rewrite and restructuring of the Notification guidance.</h2>
+                        <h2>I led the content rewrite and restructuring of the Notification guidelines.</h2>
                         <p>My work included:</p>
                         <div className="cs-cards">
                             {roleAreas.map(({ title, copy }) => (
@@ -359,7 +359,7 @@ const SapNotifications = () => {
                         </blockquote>
                         <p>Then explained the principles that help designers make decisions.</p>
                         <p>
-                            For example, the published guidance recommends minimizing information
+                            For example, the published guidelines recommend minimizing information
                             and actions while still providing enough context for users to judge
                             importance.
                         </p>
@@ -461,7 +461,7 @@ const SapNotifications = () => {
                             </p>
                         </blockquote>
                         <p>
-                            The published guidance now explicitly recommends displaying only
+                            The published guidelines now explicitly recommend displaying only
                             self-explanatory actions and explains how multiple actions move into the
                             overflow.
                         </p>
@@ -512,7 +512,7 @@ const SapNotifications = () => {
                             So the content needs to support quick scanning and deeper exploration.
                         </p>
                         <p>
-                            The notification guidance covers everything from notification ordering
+                            The notification guidelines cover everything from notification ordering
                             and grouping to actions, truncation, read/unread states, settings, and
                             responsive behavior.
                         </p>
@@ -527,16 +527,16 @@ const SapNotifications = () => {
 
                 <section className="cs-section">
                     <div className="container cs-column">
-                        <p className="cs-kicker">Reframing the guidance</p>
+                        <p className="cs-kicker">Reframing the guidelines</p>
                         <p>The challenge wasn&apos;t simply to rewrite individual sentences.</p>
                         <p className="cs-emphasis">
-                            It was to rethink how designers find, understand, and use guidance when
+                            It was to rethink how designers find, understand, and use the guidelines when
                             designing notification experiences.
                         </p>
                         <p>I focused on three areas:</p>
 
                         <div className="cs-focus">
-                            <h3>1 — Make guidance actionable</h3>
+                            <h3>1 — Make the guidelines actionable</h3>
                             <p>
                                 Instead of explaining what notifications are, the content should
                                 help designers understand when and why to use them.
@@ -566,7 +566,7 @@ const SapNotifications = () => {
                                 relationships easier to understand.
                             </p>
                             <p>
-                                I organized the guidance around the areas designers need to
+                                I organized the guidelines around the areas designers need to
                                 navigate:
                             </p>
                             <div className="cs-cards cs-cards-compact">
@@ -622,7 +622,7 @@ const SapNotifications = () => {
                             It was about creating a system that people could navigate and reuse.
                         </p>
                         <p>
-                            I structured the guidance so that each section answers a different
+                            I structured the guidelines so that each section answers a different
                             question:
                         </p>
                         <div className="cs-table-wrap">
@@ -670,7 +670,7 @@ const SapNotifications = () => {
                         </ul>
                         <p>
                             The goal was to make the language predictable enough that designers
-                            could move between different parts of the guidance without having to
+                            could move between different parts of the guidelines without having to
                             relearn the terminology.
                         </p>
                         <blockquote className="cs-callout">
@@ -715,7 +715,7 @@ const SapNotifications = () => {
                             ))}
                         </ol>
                         <p className="cs-emphasis">
-                            The goal was to make the guidance useful at both the component level and
+                            The goal was to make the guidelines useful at both the component level and
                             the experience level—helping designers understand not only what each
                             element does, but how the pieces work together.
                         </p>
@@ -748,7 +748,7 @@ const SapNotifications = () => {
                         <h2>
                             A clearer foundation for designing notification experiences across SAP.
                         </h2>
-                        <p>The rewritten guidance brings together:</p>
+                        <p>The rewritten guidelines bring together:</p>
                         <div className="cs-cards">
                             {outcomes.map(({ title, copy }) => (
                                 <div className="cs-card" key={title}>

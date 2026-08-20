@@ -10,16 +10,16 @@ import carnivalThumb from '../assets/projects/grand-uni-carnival/thumb.jpg';
 
 export const projects = [
     {
-        name: 'Notification Guidance',
+        name: 'Notification Guidelines',
         category: 'Design system',
         context: 'SAP Fiori Design System',
         featured: true,
-        challenge: 'The notification guidance had the information designers needed, but it was difficult to scan and apply.',
-        approach: 'Restructured the guidance around the decisions designers make, rewrote it as actionable recommendations, and standardized the language across the notification experience.',
+        challenge: 'The notification guidelines had the information designers needed, but it was difficult to scan and apply.',
+        approach: 'Restructured the guidelines around the decisions designers make, rewrote them as actionable recommendations, and standardized the language across the notification experience.',
         contribution: 'Content strategy · Information architecture · UX writing',
         caseStudyLink: '/projects/sap-fiori-notifications',
         thumbnail: sapNotificationsThumb,
-        thumbnailAlt: 'The published SAP Fiori Notifications guidance page with its blue header and on-this-page navigation.'
+        thumbnailAlt: 'The published SAP Fiori Notifications guidelines page with its blue header and on-this-page navigation.'
     },
     {
         name: 'Login & Onboarding',
